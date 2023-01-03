@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/tips.css">
+    <!-- Boxicons CDN link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .title{
+            color: black;
+            margin-left: 5%;
+            margin-top: 5%;
+            font-size: 4vmin;
+        }
+        .text{
+            margin-left: 8%;
+            margin-right: 8%;
+            color: black;
+            font-size: 3vmin;
+        }   
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-cloud'></i>
+            <span class="logo-name">太水了啦</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="history.html">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="link-name">歷史事件</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="history.html">歷史事件</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="tips.html">
+                    <i class='bx bx-bulb'></i>
+                    <span class="link-name">小知識</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="tips.html">小知識</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="record.html">
+                        <i class='bx bx-food-menu'></i>
+                        <span class="link-name">歷年紀錄</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="record.html">歷年紀錄</a></li>
+                    <li><a href="historical_flooded.html">歷史淹水範圍</a></li>
+                    <li><a href="historical_rainfall.html">歷史雨量</a></li>
+                    <li><a href="historical_waterlevel.html">歷史水位</a></li>
+                    <li><a href="historical_groundwaterlevel.html">歷史地下水水位</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-file-find'></i>
+                        <span class="link-name">即時資料</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">即時資料</a></li>
+                    <li><a href="#">時雨量</a></li>
+                    <li><a href="#">即時河水水位</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="line.html">
+                    <i><img class="line" src="assets/img/line.png"></i>
+                    <span class="link-name">Line Bot</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="line.html">Line Bot</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span style="color:black ;font-size: 6vmin ;margin-top:2%">
+               淹水防災小知識
+            </span>
+        </div>
+        <div class="title">
+            積水、淹水防範對策:
+            <br><br>
+        </div>
+        <div class="text">
+            <img style="width: 500px;height: 400px; float: right;" src="assets/img/tips.jpg">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.颱風或低氣壓接近下，漲潮海面比平時高，波浪湧上岸造成海水倒灌，應特別注意。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.颱風或低氣壓接近下，海面上升或滿潮重疊一起時，須十分警戒，沿海面居民應特別警覺。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.住在低漥容易淹水的民眾，事先做好準備，可以減少財物損失。<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)將重要文件、電器產品、衣服移往2樓或高處<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)將家中重要的東西，放置在高處的架子上。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)將汽機車盡早移往安全處所。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)檢查屋頂排水管、雨水溝是否阻塞。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)檢查屋頂、外牆是否龜裂。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6)清理排水溝落葉及垃圾<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7)備妥沙包或安裝防水閘門<br>
+        </div>
+    </section>
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        console.log(arrow);
+
+        for(var i=0; i<arrow.length; i++){
+            arrow[i].addEventListener("click", (e) =>{
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu")
+            }); 
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebar);
+        sidebarBtn.addEventListener("click", () =>{
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歷史雨量</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/hflooded.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-cloud'></i>
+            <span class="logo-name">太水了啦</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="history.html">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="link-name">歷史事件</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="history.html">歷史事件</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="tips.html">
+                    <i class='bx bx-bulb'></i>
+                    <span class="link-name">小知識</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="tips.html">小知識</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="record.html">
+                        <i class='bx bx-food-menu'></i>
+                        <span class="link-name">歷年紀錄</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="record.html">歷年紀錄</a></li>
+                    <li><a href="historical_flooded.html">歷史淹水範圍</a></li>
+                    <li><a href="historical_rainfall.html">歷史雨量</a></li>
+                    <li><a href="historical_waterlevel.html">歷史水位</a></li>
+                    <li><a href="historical_groundwaterlevel.html">歷史地下水水位</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-file-find'></i>
+                        <span class="link-name">即時資料</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">即時資料</a></li>
+                    <li><a href="#">時雨量</a></li>
+                    <li><a href="#">即時河水水位</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="line.html">
+                    <i><img class="line" src="assets/img/line.png"></i>
+                    <span class="link-name">Line Bot</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="line.html">Line Bot</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text"></span>
+        </div>
+        <div class="container">
+            <div class="drop" style="--clr:#66B3FF">
+                <div class="content">
+                    <h2>03</h2>
+                    <p>歷史年降雨量</p>
+                    <form>
+                        <label for="years">選擇年分</label><br>
+                        <select name="years" id="years"onchange="window.open(this.options[this.selectedIndex].value)">
+                          <option>請選擇年分</option>
+                          <option value="2022rainfall.html">2022</option>
+                          <option value="2021rainfall.html">2021</option>
+                          <option value="2020rainfall.html">2020</option>
+                          <option value="2019rainfall.html">2019</option>
+                          <option value="2018rainfall.html">2018</option>
+                          <option value="2017rainfall.html">2017</option>
+                          <option value="2016rainfall.html">2016</option>
+                          <option value="2015rainfall.html">2015</option>
+                          <option value="2014rainfall.html">2014</option>
+                          <option value="2013rainfall.html">2013</option>
+                          <option value="2012rainfall.html">2012</option>
+                        </select>
+                    </form>     
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        console.log(arrow);
+
+        for(var i=0; i<arrow.length; i++){
+            arrow[i].addEventListener("click", (e) =>{
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu")
+            }); 
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebar);
+        sidebarBtn.addEventListener("click", () =>{
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2012</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/rainfall.css">
+    <!-- Boxicons CDN link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-cloud'></i>
+            <span class="logo-name">太水了啦</span>
+        </div>
+        
+        <ul class="nav-links">
+            <li>
+                <a href="history.html">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="link-name">歷史事件</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="history.html">歷史事件</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="tips.html">
+                    <i class='bx bx-bulb'></i>
+                    <span class="link-name">小知識</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="tips.html">小知識</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="record.html">
+                        <i class='bx bx-food-menu'></i>
+                        <span class="link-name">歷年紀錄</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="record.html">歷年紀錄</a></li>
+                    <li><a href="historical_flooded.html">歷史淹水範圍</a></li>
+                    <li><a href="historical_rainfall.html">歷史雨量</a></li>
+                    <li><a href="historical_waterlevel.html">歷史水位</a></li>
+                    <li><a href="historical_groundwaterlevel.html">歷史地下水水位</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-file-find'></i>
+                        <span class="link-name">即時資料</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">即時資料</a></li>
+                    <li><a href="#">時雨量</a></li>
+                    <li><a href="#">即時河水水位</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="line.html">
+                    <i><img class="line" src="assets/img/line.png"></i>
+                    <span class="link-name">Line Bot</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="line.html">Line Bot</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text"></span>
+        </div>
+        <div class="a">
+        <table class = "b" border="3">
+        <tr>
+            <th>縣市</th>
+            <th>觀測站</th>
+            <th>年平均水位(m)</th>
+        </tr>
+        
+        <tr>
+            <td>台北市</td>
+            <td>寶橋</td>
+            <td>7.52</td>
+        </tr>
+        <tr>
+            <td>新北市</td>
+            <td>水源橋</td>
+            <td>170.67</td>
+        </tr>
+        <tr>
+            <td>桃園市</td>
+            <td>石門</td>
+            <td>134.72</td>
+        </tr>
+        
+        <tr>
+            <td>新竹市</td>
+            <td>復興橋</td>
+            <td>89.89</td>
+        </tr>
+        <tr>
+            <td>苗栗縣</td>
+            <td>平安橋</td>
+            <td>38.47</td>
+        </tr>
+        <tr>
+            <td>台中市</td>
+            <td>卓蘭</td>
+            <td>316.24</td>
+        </tr>
+        <tr>
+            <td>彰化縣</td>
+            <td>大肚橋</td>
+            <td>11.39</td>
+        </tr>
+        <tr>
+            <td>南投縣</td>
+            <td>成功橋</td>
+            <td>92.23</td>
+        </tr>
+        <tr>
+            <td>雲林縣</td>
+            <td>彰雲橋</td>
+            <td>89.39</td>
+        </tr>
+        
+        <tr>
+            <td>台南市</td>
+            <td>新營</td>
+            <td>4.76</td>
+        </tr>
+        <tr>
+            <td>高雄市</td>
+            <td>崇德橋</td>
+            <td>6.89</td>
+        </tr>
+        <tr>
+            <td>屏東縣</td>
+            <td>潮州</td>
+            <td>5.62</td>
+        </tr>
+        <tr>
+            <td>宜蘭縣</td>
+            <td>西門橋</td>
+            <td>4.5</td>
+        </tr>
+        <tr>
+            <td>花蓮縣</td>
+            <td>立山</td>
+            <td>166.3</td>
+        </tr>
+        <tr>
+            <td>台東縣</td>
+            <td>知本</td>
+            <td>154.7</td>
+        </tr>
+        
+        
+        </table>
+    </div>
+    </section>
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        console.log(arrow);
+
+        for(var i=0; i<arrow.length; i++){
+            arrow[i].addEventListener("click", (e) =>{
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu")
+            }); 
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebar);
+        sidebarBtn.addEventListener("click", () =>{
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>

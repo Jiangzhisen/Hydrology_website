@@ -1,0 +1,16 @@
+.a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 25px; 
+    text-align: center;
+}
+.b{
+    margin-left: 50px;
+    border-color: black;
+    border-collapse: collapse;
+    text-align: center;
+    width: 80%;
+    height: auto;
+}

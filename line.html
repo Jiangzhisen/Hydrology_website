@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Bot</title>
+    <link rel="stylesheet" href="assets/css/line.css">
+        <!-- Boxicons CDN link -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-water'></i>
+            <span class="logo-name">太水了啦</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="history.html">
+                    <i class='bx bx-book-bookmark'></i>
+                    <span class="link-name">歷史事件</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="history.html">歷史事件</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="tips.html">
+                    <i class='bx bx-bulb'></i>
+                    <span class="link-name">小知識</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="tips.html">小知識</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="record.html">
+                        <i class='bx bx-food-menu'></i>
+                        <span class="link-name">歷年紀錄</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="record.html">歷年紀錄</a></li>
+                    <li><a href="historical_flooded.html">歷史淹水範圍</a></li>
+                    <li><a href="historical_rainfall.html">歷史雨量</a></li>
+                    <li><a href="historical_waterlevel.html">歷史水位</a></li>
+                    <li><a href="historical_groundwaterlevel.html">歷史地下水水位</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bx-file-find'></i>
+                        <span class="link-name">即時資料</span>
+                    </a>
+                    <i class='bx bx-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link-name" href="#">即時資料</a></li>
+                    <li><a href="#">時雨量</a></li>
+                    <li><a href="#">即時河水水位</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="line.html">
+                    <i><img class="line" src="assets/img/line.png"></i>
+                    <span class="link-name">Line Bot</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link-name" href="line.html">Line Bot</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text"></span>
+        </div>  
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="card">
+                <div class="imgbx">
+                    <img src="assets/img/linebot.jpg">
+                </div>
+                <div class="content">
+                    <div class="details">
+                        <h2>Line Bot</h2>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <footer style="position: absolute; bottom: 0;">
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social_icon">
+                <li><a href="#"><ion-icon name="rainy-outline"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="water-outline"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="thunderstorm-outline"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="umbrella-outline"></ion-icon></a></li>
+            </ul>
+            <!-- <p>@2022 Team 10 | CYCY IM</p> -->
+        </footer>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        console.log(arrow);
+
+        for(var i=0; i<arrow.length; i++){
+            arrow[i].addEventListener("click", (e) =>{
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu")
+            }); 
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebar);
+        sidebarBtn.addEventListener("click", () =>{
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>
